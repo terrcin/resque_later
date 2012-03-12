@@ -44,8 +44,8 @@ function add_job(new_job) {
     dup_job.scheduled = dup_job.force_by;
     save_jobs();
   }
-  else if (new_job.scheduled < dup_job.force_by) {
-    dup_job.scheduled = new Date(Math.min(dup_job.scheduled, new_job.scheduled)) * 1;
+  else {
+    dup_job.scheduled = new Date(Math.max(dup_job.scheduled, new_job.scheduled)) * 1;
     save_jobs();
   }
   
