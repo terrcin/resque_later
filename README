@@ -4,3 +4,9 @@ This has come about because I wanted to be able to run resque jobs later with th
 * if I trigger the exact same job, including params, as one already being delayed, just delay the existing one further without adding the duplicate job
 * have a limit to how long a job can be continuously delayed for
 * don't loose jobs if it crashes
+
+Todo:
+
+* testing ;-)
+* example rails app using it
+* being smart about the timeouts, should work out when the next job is due to go and trigger then instead of every second (this was a quickly slapped together proof of concept after all)
