@@ -1,0 +1,18 @@
+{
+  "config": {
+    "resque": {
+      "connect": {
+        "host": "127.0.0.1",
+        "port": 6379,
+        "namespace": "<your apps namespace>",
+        "timeout": 1000
+      },      
+      "queue": "ResqueLater",
+      "job": "ResqueLater"
+    },
+    "jobs": {
+      "force_by": 900,
+      "filename": "jobs.json"
+    }
+  }
+}

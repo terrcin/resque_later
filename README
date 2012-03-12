@@ -1,0 +1,6 @@
+This has come about because I wanted to be able to run resque jobs later with the following criteria:
+
+* saying in how many seconds it should run
+* if I trigger the exact same job, including params, as one already being delayed, just delay the existing one further without adding the duplicate job
+* have a limit to how long a job can be continuously delayed for
+* don't loose jobs if it crashes
